@@ -1,0 +1,83 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "How are you", "Is anyone there?", "Hello", "Good day", "Whats up", "Hey", "Greetings"],
+        "responses": ["Hello!", "Good to see you again!", "Hi there, how can I help?"],
+        "context_set": ""
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["cya", "See you later", "Goodbye", "I am Leaving", "Have a Good day", "bye", "Cao", "See ya"],
+        "responses": ["Sad to see you go :(", "Talk to you later", "Goodbye!"],
+        "context_set": ""
+      },
+      {
+        "tag": "music_genre",
+        "patterns": ["Can you recommend some music?", "I want music suggestions", "Suggest music based on genre", "Recommend music"],
+        "responses": ["Sure, I can help! What genre are you interested in?"],
+        "context_set": ""
+      },
+      {
+        "tag": "pop_music",
+        "patterns": ["Pop music", "Pop", "Popular music"],
+        "responses": ["For Pop music, I'd recommend artists like Taylor Swift, Ed Sheeran, and Dua Lipa."],
+        "context_set": ""
+      },
+      {
+        "tag": "rock_music",
+        "patterns": ["Rock music", "Rock", "Classic rock"],
+        "responses": ["Rock music enthusiasts often enjoy bands like Led Zeppelin, Queen, and The Beatles."],
+        "context_set": ""
+      },
+      {
+        "tag": "hiphop_music",
+        "patterns": ["Hip hop music", "Hip hop", "Rap"],
+        "responses": ["Hip hop fans might like artists such as Kendrick Lamar, Drake, and Kanye West."],
+        "context_set": ""
+      },
+      {
+        "tag": "electronic_music",
+        "patterns": ["Electronic music", "EDM", "Techno"],
+        "responses": ["Electronic music lovers might enjoy artists like Daft Punk, Calvin Harris, and Deadmau5."],
+        "context_set": ""
+      },
+      {
+        "tag": "jazz_music",
+        "patterns": ["Jazz music", "Jazz", "Smooth jazz"],
+        "responses": ["Fans of Jazz might appreciate Miles Davis, John Coltrane, and Louis Armstrong."],
+        "context_set": ""
+      },
+      {
+        "tag": "classical_music",
+        "patterns": ["Classical music", "Classical"],
+        "responses": ["Classical music enthusiasts often love composers like Mozart, Beethoven, and Bach."],
+        "context_set": ""
+      },
+      {
+        "tag": "country_music",
+        "patterns": ["Country music", "Country"],
+        "responses": ["For Country music, artists like Johnny Cash, Dolly Parton, and Willie Nelson are iconic."],
+        "context_set": ""
+      },
+      {
+        "tag": "reggae_music",
+        "patterns": ["Reggae music", "Reggae"],
+        "responses": ["Reggae fans might enjoy Bob Marley, Peter Tosh, and Jimmy Cliff."],
+        "context_set": ""
+      },
+      {
+        "tag": "indie_music",
+        "patterns": ["Indie music", "Indie"],
+        "responses": ["Indie music enthusiasts often enjoy bands like Arctic Monkeys, The Strokes, and Tame Impala."],
+        "context_set": ""
+      },
+      {
+        "tag": "metal_music",
+        "patterns": ["Metal music", "Metal"],
+        "responses": ["Metal music enthusiasts might like bands such as Metallica, Iron Maiden, and Black Sabbath."],
+        "context_set": ""
+      }
+    ]
+  }
+  
