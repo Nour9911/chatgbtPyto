@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <section class="chatbox">
+        <section class="chat-window" id="chat-messages">
+            <!-- Chat messages will be displayed here -->
+        </section>
+        <form class="chat-input" onsubmit="return false;">
+            <input type="text" id="user-input" autocomplete="on" placeholder="Type a message" />
+            <button id="send-button">
+                <svg style="width:24px;height:24px" viewBox="0 0 24 24">
+                    <path fill="rgba(0,0,0,.38)" d="M17,12L12,17V14H8V10H12V7L17,12M21,16.5C21,16.88 20.79,17.21 20.47,17.38L12.57,21.82C12.41,21.94 12.21,22 12,22C11.79,22 11.59,21.94 11.43,21.82L3.53,17.38C3.21,17.21 3,16.88 3,16.5V7.5C3,7.12 3.21,6.79 3.53,6.62L11.43,2.18C11.59,2.06 11.79,2 12,2C12.21,2 12.41,2.06 12.57,2.18L20.47,6.62C20.79,6.79 21,7.12 21,7.5V16.5M12,4.15L5,8.09V15.91L12,19.85L19,15.91V8.09L12,4.15Z" />
+                </svg>
+            </button>
+        </form>
+    </section>
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>
+
+
+
+
+
+
+ <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages">
+            
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script src="{{ url_for('static', filename='scripts.js') }}"></script>
+</body>
+</html>  -->
+
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chatbot</title>
+    <style>
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+        #chat-container {
+            width: 400px;
+            margin: 0 auto;
+            padding: 20px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+        #chat-messages {
+            height: 300px;
+            overflow-y: scroll;
+            border-bottom: 1px solid #eee;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+        #user-input {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            box-sizing: border-box;
+        }
+        #send-button {
+            width: 100%;
+            padding: 10px;
+            cursor: pointer;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+        }
+    </style>
+</head>
+<body>
+    <div id="chat-container">
+        <div id="chat-messages">
+           
+        </div>
+        <input type="text" id="user-input" placeholder="Type your message...">
+        <button id="send-button">Send</button>
+    </div>
+
+    <script>
+        document.getElementById('send-button').addEventListener('click', function() {
+            let userInput = document.getElementById('user-input').value;
+
+            fetch('/process', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({ message: userInput })
+            })
+            .then(response => response.json())
+            .then(data => {
+                let chatMessages = document.getElementById('chat-messages');
+                let userMessage = document.createElement('p');
+                let botResponse = document.createElement('p');
+
+                userMessage.textContent = `You: ${userInput}`;
+                botResponse.textContent = `Bot: ${data.response}`;
+
+                chatMessages.appendChild(userMessage);
+                chatMessages.appendChild(botResponse);
+            })
+            .catch(error => console.error('Error:', error));
+
+            document.getElementById('user-input').value = ''; 
+        });
+    </script>
+</body>
+</html> -->

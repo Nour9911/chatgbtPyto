@@ -8,8 +8,8 @@ import tensorflow as tf
 
 lemmatizer = WordNetLemmatizer()
 
+# Load intents and model
 intents = json.loads(open('intents.json').read())
-
 words = pickle.load(open('words.pkl', 'rb'))
 classes = pickle.load(open('classes.pkl', 'rb'))
 model = tf.keras.models.load_model('chatbot_model.h5')
@@ -31,8 +31,8 @@ def bag_of_words(sentence):
 def predict_class(sentence):
     bow = bag_of_words(sentence)
     res = model.predict(np.array([bow]))[0]
-    ERROE_THRESHOLD = 0.25
-    results = [[i, r] for i, r in enumerate(res) if r > ERROE_THRESHOLD]
+    ERROR_THRESHOLD = 0.25
+    results = [[i, r] for i, r in enumerate(res) if r > ERROR_THRESHOLD]
 
     results.sort(key=lambda x: x[1], reverse=True)
     return_list = []
@@ -48,11 +48,3 @@ def get_response(intents_list, intents_json):
             result = random.choice(i['responses'])
             break
     return result
-
-print("GO! Pyto is funking!")
-
-while True:
-    message = input("")
-    ints = predict_class(message)
-    res = get_response(ints, intents)
-    print(res)
